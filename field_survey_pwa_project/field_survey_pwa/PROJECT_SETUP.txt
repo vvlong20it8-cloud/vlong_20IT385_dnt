@@ -1,0 +1,9 @@
+This archive contains the complete Flutter application source and web assets.
+After extracting, open a terminal in this folder and run:
+
+  flutter create . --platforms=web,android,windows
+  flutter pub get
+  flutter run -d chrome
+
+The `flutter create` command generates native/platform scaffolding using the Flutter SDK installed on your computer.
+If you only need the web app, you may use `flutter create . --platforms=web` instead.

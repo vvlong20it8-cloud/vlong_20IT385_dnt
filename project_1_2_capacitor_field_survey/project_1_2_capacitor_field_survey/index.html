@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f766e" />
+    <title>Field Survey | Capacitor</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand"><span class="brand-icon">⌖</span><span>Field Survey</span></div>
+        <div class="top-label">FIELD OPERATIONS</div>
+      </header>
+      <main class="container">
+        <section class="intro">
+          <div class="eyebrow">FIELD OPERATIONS</div>
+          <h1>Survey dashboard</h1>
+          <p>Create, review and manage field observations in one place.</p>
+          <div class="tech-note"><span class="pulse"></span> Capacitor-ready field survey app</div>
+        </section>
+
+        <section class="metrics" aria-label="Survey statistics">
+          <article class="metric"><div class="metric-icon teal">▤</div><div><strong id="totalCount">0</strong><span>Total surveys</span></div></article>
+          <article class="metric"><div class="metric-icon orange">◷</div><div><strong id="progressCount">0</strong><span>In progress</span></div></article>
+          <article class="metric"><div class="metric-icon green">✓</div><div><strong id="completedCount">0</strong><span>Completed</span></div></article>
+        </section>
+
+        <section class="records-heading">
+          <h2>Survey records</h2>
+          <button id="newSurveyBtn" class="primary-btn"><span>＋</span> New survey</button>
+        </section>
+
+        <section class="filters">
+          <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Search location, surveyor, notes..." /></label>
+          <label class="filterbox"><span>Status</span><select id="statusFilter"><option>All</option><option>Planned</option><option>In progress</option><option>Completed</option></select></label>
+          <button id="refreshBtn" class="icon-btn" title="Refresh">↻</button>
+        </section>
+
+        <section id="notice" class="notice" hidden></section>
+        <section id="records" class="records"></section>
+        <footer>Field Survey · Web + Capacitor</footer>
+      </main>
+    </div>
+
+    <dialog id="surveyDialog">
+      <form id="surveyForm">
+        <div class="dialog-head">
+          <div><div class="eyebrow">FIELD RECORD</div><h2 id="dialogTitle">New survey</h2></div>
+          <button type="button" id="closeDialogBtn" class="close-btn" aria-label="Close">×</button>
+        </div>
+        <input type="hidden" id="surveyId" />
+        <label>Location <span class="required">*</span><input id="locationInput" required maxlength="255" placeholder="e.g. District 1, Ho Chi Minh City" /></label>
+        <label>Surveyor name <span class="required">*</span><input id="surveyorInput" required maxlength="150" placeholder="Enter surveyor name" /></label>
+        <div class="form-grid">
+          <label>Survey date <span class="required">*</span><input id="dateInput" type="date" required /></label>
+          <label>Status<select id="statusInput"><option>Planned</option><option>In progress</option><option>Completed</option></select></label>
+        </div>
+        <label>Notes<textarea id="notesInput" rows="3" placeholder="Observations or findings..."></textarea></label>
+        <div class="dialog-actions"><button type="button" id="cancelBtn" class="secondary-btn">Cancel</button><button type="submit" class="primary-btn">Save survey</button></div>
+      </form>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "Field Survey",
+  "short_name": "Field Survey",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F5F7FA",
+  "theme_color": "#0F766E",
+  "description": "Manage field survey records."
+}

@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS field_survey_db
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+USE field_survey_db;
+
+CREATE TABLE IF NOT EXISTS surveys (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  location VARCHAR(255) NOT NULL,
+  surveyor VARCHAR(150) NOT NULL,
+  survey_date DATE NOT NULL,
+  status ENUM('Planned', 'In progress', 'Completed') NOT NULL DEFAULT 'Planned',
+  notes TEXT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);

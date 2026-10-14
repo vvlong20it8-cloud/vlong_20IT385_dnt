@@ -1,0 +1,22 @@
+{
+  "name": "project-1-2-capacitor-field-survey",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Project 1.2 Field Survey built with Vite and Capacitor, backed by PHP and MySQL.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "cap:sync": "cap sync",
+    "cap:android": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/core": "^6.2.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.1",
+    "vite": "^5.4.10"
+  }
+}

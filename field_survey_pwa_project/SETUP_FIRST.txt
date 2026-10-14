@@ -1,0 +1,10 @@
+LÀM THEO THỨ TỰ:
+1. Start Apache và MySQL trong XAMPP.
+2. Import database/field_survey_db.sql trong phpMyAdmin.
+3. Copy backend/field_survey_api vào C:\xampp\htdocs\field_survey_api.
+4. Mở http://localhost/field_survey_api/api.php để kiểm tra API.
+5. Mở thư mục project trong VS Code, chạy:
+   flutter create . --platforms=web,android,windows
+   flutter pub get
+   flutter run -d chrome
+6. Nếu thư mục htdocs, MySQL password hoặc cổng Apache khác mặc định, sửa README.md và backend/field_survey_api/db.php.
